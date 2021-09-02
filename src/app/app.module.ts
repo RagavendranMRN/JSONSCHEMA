@@ -8,6 +8,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { AppComponent } from './app.component';
 import { ArrayTypeComponent } from './array.type';
 import { ObjectTypeComponent } from './object.type';
+import { NgxJsonViewerModule } from 'ngx-json-viewer';
 
 import { NullTypeComponent } from './null.type';
 
@@ -67,6 +68,7 @@ export function constValidationMessage(err, field: FormlyFieldConfig) {
     ReactiveFormsModule,
     FormlyBootstrapModule,
     HttpClientModule,
+    NgxJsonViewerModule,
     MatMenuModule,
     FormlyModule.forRoot({
       extras: { resetFieldOnHide: true },
