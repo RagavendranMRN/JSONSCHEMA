@@ -71,7 +71,7 @@
           ]
         },
         {
-          "name": "requestId",
+          "name": "RequestId",
           "id": "qn_detailInformation_requestID_1",
           "key": "qn.detailInformation.requestID",
           "isExtrinsic": false,
