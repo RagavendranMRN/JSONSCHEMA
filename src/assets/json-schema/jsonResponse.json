@@ -1,0 +1,90 @@
+{
+  "documentType": "qualityNotification",
+  "version": "1.0.0",
+  "actions": [
+    {
+      "name": "edit"
+    },
+    {
+      "name": "cancel"
+    }
+  ],
+  "entities": [
+    {
+      "name": "Quality Notification Detail",
+      "fields": [
+        {
+          "name": "Status",
+          "id": "qn_detailInformation_status_1",
+          "key": "qn.detailInformation.status",
+          "type": "select",
+          "isExtrinsic": false,
+          "mandatory": true,
+          "editable": true,
+          "translation": {
+            "notSupported": true,
+            "devComment": "Dev comment: QN_STATUS",
+            "translationKey": "QN_STATUS",
+            "description": "Status"
+          },
+          "options": [
+            {
+              "translation": {
+                "translationKey": "QN_STATUS_NEW"
+              },
+              "value": "new",
+              "label": "new"
+            },
+            {
+              "translation": {
+                "translationKey": "QN_STATUS_IN_PROCESS"
+              },
+              "value": "in-process"
+            },
+            {
+              "translation": {
+                "translationKey": "QN_STATUS_OBSOLETED"
+              },
+              "value": "obsoleted",
+              "nonSelectable": true
+            },
+            {
+              "translation": {
+                "translationKey": "QN_STATUS_CANCELED"
+              },
+              "value": "canceled",
+              "nonSelectable": true
+            },
+            {
+              "translation": {
+                "translationKey": "QN_STATUS_COMPLETED"
+              },
+              "value": "completed"
+            },
+            {
+              "translation": {
+                "translationKey": "QN_STATUS_CLOSED"
+              },
+              "value": "closed",
+              "nonSelectable": true
+            }
+          ]
+        },
+        {
+          "name": "requestId",
+          "id": "qn_detailInformation_requestID_1",
+          "key": "qn.detailInformation.requestID",
+          "isExtrinsic": false,
+          "mandatory": true,
+          "readOnly": true,
+          "type": "input",
+          "translation": {
+            "devComment": "Dev comment: QN_NUMBER",
+            "translationKey": "QN_NUMBER",
+            "description": "Supplier deviation no."
+          }
+        }
+      ]
+    }
+  ]
+}

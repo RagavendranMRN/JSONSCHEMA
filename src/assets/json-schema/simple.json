@@ -1,0 +1,93 @@
+{
+  "schema": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "title": "Quality Notification Detail",
+    "additionalProperties": { "type": "object" },
+    "properties": {
+      "status": {
+        "id": "qn_detailInformation_status_1",
+        "name": "qn_detailInformation_status_1",
+        "key": "qn.detailInformation.status",
+        "type": "select",
+        "title": "Status",
+        "widget": {
+          "formlyConfig": {
+            "type": "select",
+            "templateOptions": {
+              "translation": {
+                "notSupported": true,
+                "devComment": "Dev comment: QN_STATUS",
+                "translationKey": "QN_STATUS",
+                "description": "Status"
+              },
+              "options": [
+                {
+                  "translation": {
+                    "translationKey": "QN_STATUS_NEW"
+                  },
+                  "value": "new",
+                  "label": "new"
+                },
+                {
+                  "translation": {
+                    "translationKey": "QN_STATUS_IN_PROCESS"
+                  },
+                  "value": "in-process"
+                },
+                {
+                  "translation": {
+                    "translationKey": "QN_STATUS_OBSOLETED"
+                  },
+                  "value": "obsoleted",
+                  "nonSelectable": true
+                },
+                {
+                  "translation": {
+                    "translationKey": "QN_STATUS_CANCELED"
+                  },
+                  "value": "canceled",
+                  "nonSelectable": true
+                },
+                {
+                  "translation": {
+                    "translationKey": "QN_STATUS_COMPLETED"
+                  },
+                  "value": "completed"
+                },
+                {
+                  "translation": {
+                    "translationKey": "QN_STATUS_CLOSED"
+                  },
+                  "value": "closed",
+                  "nonSelectable": true
+                }
+              ]
+            }
+          }
+        }
+      },
+      "requestId": {
+        "id": "qn_detailInformation_requestID_1",
+        "name": "qn_detailInformation_requestID_1",
+        "Key": "qn.detailInformation.requestID",
+        "type": "string",
+        "title": "Request ID",
+        "widget": {
+          "formlyConfig": {
+            "type": "input",
+            "templateOptions": {
+              "translation": {
+                "devComment": "Dev comment: QN_NUMBER",
+                "translationKey": "QN_NUMBER",
+                "description": "Supplier deviation no."
+              }
+            }
+          }
+        },
+        "readOnly": true
+      }
+    }
+  },
+  "model": {}
+}
