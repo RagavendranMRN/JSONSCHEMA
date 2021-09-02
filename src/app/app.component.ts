@@ -29,58 +29,58 @@ export class AppComponent {
     this.loadExample1('simple');
   }
 
-  // loadExample(type: string) {
-  //   this.http
-  //     .get<any>(`assets/json-schema/${type}.json`)
-  //     .pipe(
-  //       tap(json => {
-  //         json.entities.map(entity => {
-  //           this.schema.title = entity.name;
-  //           let fieldConfigs = [];
-  //           entity.fields.map(field => {
-  //             let fld = {};
-  //             let defaultValues = {
-  //               name: field.name,
-  //               id: field.id,
-  //               key: field.key,
-  //               type: field.type,
-  //               title: field.name,
-  //               readOnly: field.readOnly
-  //             };
+  loadExample(type: string) {
+    this.http
+      .get<any>(`assets/json-schema/${type}.json`)
+      .pipe(
+        tap(json => {
+          json.entities.map(entity => {
+            this.schema.title = entity.name;
+            let fieldConfigs = [];
+            entity.fields.map(field => {
+              let fld = {};
+              let defaultValues = {
+                name: field.name,
+                id: field.id,
+                key: field.key,
+                type: field.type,
+                title: field.name,
+                readOnly: field.readOnly
+              };
 
-  //             let tempOpt = {
-  //               widget: {
-  //                 type: field.type,
-  //                 formlyConfig: {
-  //                   type: field.type,
-  //                   templateOptions: {
-  //                     translation: field.translation,
-  //                     options: field.options
-  //                   }
-  //                 }
-  //               }
-  //             };
+              let tempOpt = {
+                widget: {
+                  type: field.type,
+                  formlyConfig: {
+                    type: field.type,
+                    templateOptions: {
+                      translation: field.translation,
+                      options: field.options
+                    }
+                  }
+                }
+              };
 
-  //             fld[field.name] = {
-  //               ...defaultValues,
-  //               ...tempOpt
-  //             };
-  //             fieldConfigs.push(fld);
-  //           });
-  //           this.schema.properties = Object.assign({}, ...fieldConfigs);
-  //           this.jsonSchema = { schema: this.schema };
-  //         });
+              fld[field.name] = {
+                ...defaultValues,
+                ...tempOpt
+              };
+              fieldConfigs.push(fld);
+            });
+            this.schema.properties = Object.assign({}, ...fieldConfigs);
+            this.jsonSchema = { schema: this.schema };
+          });
 
-  //         this.form = new FormGroup({});
-  //         this.options = {};
-  //         console.log(this.jsonSchema);
-  //         this.fields = [this.formlyJsonschema.toFieldConfig(this.jsonSchema)];
-  //         this.model = {};
-  //         return this.jsonSchema;
-  //       })
-  //     )
-  //     .subscribe();
-  // }
+          this.form = new FormGroup({});
+          this.options = {};
+          console.log(this.jsonSchema);
+          this.fields = [this.formlyJsonschema.toFieldConfig(this.jsonSchema)];
+          this.model = {};
+          return this.jsonSchema;
+        })
+      )
+      .subscribe();
+  }
 
   loadExample1(type: string) {
     this.http

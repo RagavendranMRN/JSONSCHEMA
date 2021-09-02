@@ -1,96 +1,101 @@
 {
-  "schema": {
-      "$schema": "http://json-schema.org/draft-07/schema#",
-      "type": "object",
-      "additionalProperties": {
-          "type": "object"
-      },
-      "title": "Quality Notification Detail",
-      "properties": {
-          "Status": {
-              "name": "Status",
-              "id": "qn_detailInformation_status_1",
-              "key": "qn.detailInformation.status",
-              "type": "select",
-              "title": "Status",
-              "widget": {
-                  "type": "select",
-                  "formlyConfig": {
-                      "type": "select",
-                      "templateOptions": {
-                          "translation": {
-                              "notSupported": true,
-                              "devComment": "Dev comment: QN_STATUS",
-                              "translationKey": "QN_STATUS",
-                              "description": "Status"
-                          },
-                          "options": [
-                              {
-                                  "translation": {
-                                      "translationKey": "QN_STATUS_NEW"
-                                  },
-                                  "value": "new",
-                                  "label": "new"
-                              },
-                              {
-                                  "translation": {
-                                      "translationKey": "QN_STATUS_IN_PROCESS"
-                                  },
-                                  "value": "in-process"
-                              },
-                              {
-                                  "translation": {
-                                      "translationKey": "QN_STATUS_OBSOLETED"
-                                  },
-                                  "value": "obsoleted",
-                                  "nonSelectable": true
-                              },
-                              {
-                                  "translation": {
-                                      "translationKey": "QN_STATUS_CANCELED"
-                                  },
-                                  "value": "canceled",
-                                  "nonSelectable": true
-                              },
-                              {
-                                  "translation": {
-                                      "translationKey": "QN_STATUS_COMPLETED"
-                                  },
-                                  "value": "completed"
-                              },
-                              {
-                                  "translation": {
-                                      "translationKey": "QN_STATUS_CLOSED"
-                                  },
-                                  "value": "closed",
-                                  "nonSelectable": true
-                              }
-                          ]
-                      }
-                  }
-              }
-          },
-          "requestId": {
-              "name": "requestId",
-              "id": "qn_detailInformation_requestID_1",
-              "key": "qn.detailInformation.requestID",
-              "type": "input",
-              "title": "requestId",
-              "readOnly": true,
-              "widget": {
-                  "type": "input",
-                  "formlyConfig": {
-                      "type": "input",
-                      "templateOptions": {
-                          "translation": {
-                              "devComment": "Dev comment: QN_NUMBER",
-                              "translationKey": "QN_NUMBER",
-                              "description": "Supplier deviation no."
-                          }
-                      }
-                  }
-              }
-          }
-      }
-  }
+    "schema": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "object",
+        "additionalProperties": {
+            "type": "object"
+        },
+        "title": "Quality Notification Detail",
+        "properties": {
+            "Status": {
+                "name": "Status",
+                "id": "qn_detailInformation_status_1",
+                "key": "qn.detailInformation.status",
+                "type": "select",
+                "title": "Status",
+                "widget": {
+                    "type": "select",
+                    "formlyConfig": {
+                        "type": "select",
+                        "templateOptions": {
+                            "translation": {
+                                "notSupported": true,
+                                "devComment": "Dev comment: QN_STATUS",
+                                "translationKey": "QN_STATUS",
+                                "description": "Status"
+                            },
+                            "options": [
+                                {
+                                    "translation": {
+                                        "translationKey": "QN_STATUS_NEW"
+                                    },
+                                    "value": "new",
+                                    "label": "New"
+                                },
+                                {
+                                    "translation": {
+                                        "translationKey": "QN_STATUS_IN_PROCESS"
+                                    },
+                                    "value": "in-process",
+                                    "label": "In Process"
+                                },
+                                {
+                                    "translation": {
+                                        "translationKey": "QN_STATUS_OBSOLETED"
+                                    },
+                                    "value": "obsoleted",
+                                    "label": "Obsoleted",
+                                    "nonSelectable": true
+                                },
+                                {
+                                    "translation": {
+                                        "translationKey": "QN_STATUS_CANCELED"
+                                    },
+                                    "value": "canceled",
+                                    "label": "Canceled",
+                                    "nonSelectable": true
+                                },
+                                {
+                                    "translation": {
+                                        "translationKey": "QN_STATUS_COMPLETED"
+                                    },
+                                    "value": "completed",
+                                    "label": "Completed"
+                                },
+                                {
+                                    "translation": {
+                                        "translationKey": "QN_STATUS_CLOSED"
+                                    },
+                                    "value": "closed",
+                                    "label": "Closed",
+                                    "nonSelectable": true
+                                }
+                            ]
+                        }
+                    }
+                }
+            },
+            "RequestId": {
+                "name": "RequestId",
+                "id": "qn_detailInformation_requestID_1",
+                "key": "qn.detailInformation.requestID",
+                "type": "input",
+                "title": "RequestId",
+                "readOnly": true,
+                "widget": {
+                    "type": "input",
+                    "formlyConfig": {
+                        "type": "input",
+                        "templateOptions": {
+                            "translation": {
+                                "devComment": "Dev comment: QN_NUMBER",
+                                "translationKey": "QN_NUMBER",
+                                "description": "Supplier deviation no."
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

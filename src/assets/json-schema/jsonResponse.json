@@ -33,19 +33,21 @@
                 "translationKey": "QN_STATUS_NEW"
               },
               "value": "new",
-              "label": "new"
+              "label": "New"
             },
             {
               "translation": {
                 "translationKey": "QN_STATUS_IN_PROCESS"
               },
-              "value": "in-process"
+              "value": "in-process",
+              "label": "In Process"
             },
             {
               "translation": {
                 "translationKey": "QN_STATUS_OBSOLETED"
               },
               "value": "obsoleted",
+              "label": "Obsoleted",
               "nonSelectable": true
             },
             {
@@ -53,19 +55,22 @@
                 "translationKey": "QN_STATUS_CANCELED"
               },
               "value": "canceled",
+              "label": "Canceled",
               "nonSelectable": true
             },
             {
               "translation": {
                 "translationKey": "QN_STATUS_COMPLETED"
               },
-              "value": "completed"
+              "value": "completed",
+              "label": "Completed"
             },
             {
               "translation": {
                 "translationKey": "QN_STATUS_CLOSED"
               },
               "value": "closed",
+              "label": "Closed",
               "nonSelectable": true
             }
           ]
